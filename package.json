@@ -1,0 +1,71 @@
+{
+  "name": "data-structures",
+  "version": "0.0.1",
+  "description": "A list of data structures to be used in all sorts of algorithms",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "lint-staged": "lint-staged --allow-empty",
+    "start": "npm run demo:tsm",
+    "test": "jest",
+    "test:verbose": "jest --verbose",
+    "test:coverage": "jest --coverage",
+    "build": "tsc",
+    "demo": "npm run build && node dist/index.js",
+    "demo:tsm": "node --require tsm index.ts",
+    "format": "prettier --write index.ts && prettier --write ./src",
+    "lint": "eslint index.ts --fix && eslint \"{src,test}/**/*.ts\" --fix"
+  },
+  "keywords": [
+    "Algorithms",
+    "Data Structures",
+    "BigO Notation",
+    "Heap",
+    "Tries",
+    "Linked List",
+    "Stack",
+    "Queue"
+  ],
+  "author": "Mihail Cuculici <mihail.cuculici@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.11",
+    "eslint": "^8.4.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.4",
+    "jest": "^27.4.3",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.0",
+    "tsm": "^2.2.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": [
+      ".spec.ts$"
+    ],
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run lint",
+      "npm run format"
+    ],
+    "*.js": "eslint --cache --fix",
+    "*./src": "prettier --write"
+  }
+}

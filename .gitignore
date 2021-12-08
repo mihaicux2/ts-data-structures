@@ -1,0 +1,7 @@
+/node_modules
+/input_backup
+/src/config_backup
+/output/students-attendances.xlsx
+/dist
+/coverage
+.DS_Store
