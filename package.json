@@ -27,7 +27,7 @@
     "Queue"
   ],
   "author": "Mihail Cuculici <mihail.cuculici@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "typescript": "^4.5.2"
   },
