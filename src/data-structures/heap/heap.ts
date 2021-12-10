@@ -32,7 +32,7 @@ export class Heap<T> {
 
   private heapifyUp(i: number): void {
     const parentIdx = this.getParentIdx(i);
-    if (parentIdx !== null && this.cmp(this.heap[parentIdx], this.heap[i])) {
+    if (parentIdx !== null && this.cmp(this.heap[i], this.heap[parentIdx])) {
       this.swap(this.heap, i, parentIdx);
       this.heapifyUp(parentIdx);
     }
@@ -45,13 +45,13 @@ export class Heap<T> {
 
     if (
       leftChildIdx !== null &&
-      this.cmp(this.heap[lowest], this.heap[leftChildIdx])
+      this.cmp(this.heap[leftChildIdx], this.heap[lowest])
     ) {
       lowest = leftChildIdx;
     }
     if (
       rightChildIdx !== null &&
-      this.cmp(this.heap[lowest], this.heap[rightChildIdx])
+      this.cmp(this.heap[rightChildIdx], this.heap[lowest])
     ) {
       lowest = rightChildIdx;
     }

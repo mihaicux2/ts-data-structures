@@ -2,8 +2,8 @@ import { Heap } from './heap';
 import { Comparator } from '../../util/types';
 
 describe('Heap', () => {
-  const minComparator: Comparator<number> = (a: number, b: number) => a > b;
-  const maxComparator: Comparator<number> = (a: number, b: number) => a < b;
+  const minComparator: Comparator<number> = (a: number, b: number) => a < b;
+  const maxComparator: Comparator<number> = (a: number, b: number) => a > b;
   const dataToBeSorted: number[] = [4, 6, -2, 1, 7, 9, 0, 123123, 5, 4];
 
   const sortedDataAsc: number[] = JSON.parse(JSON.stringify(dataToBeSorted));

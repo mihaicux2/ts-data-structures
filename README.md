@@ -8,5 +8,6 @@ Currently, it supports the following data structures:
 * Queue
 * Min/Max Heap
 * Trie
+* Binary Search Tree
 
 Check the [index.ts](./index.ts) file for more details.
